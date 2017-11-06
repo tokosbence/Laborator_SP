@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.*;
 
-public class Subcapitol {
+ class Subcapitol extends AbstractElements {
 	Integer numarulsubcap;
 	String titlu;
 	ArrayList<Imagine> imagini = new ArrayList<Imagine>();
@@ -61,5 +62,11 @@ public class Subcapitol {
 		this.paragrafe = paragrafe;
 	}
 	
+	@Override
+	public void print() {
+		System.out.println("Titlul subcapitolului: " + titlu);
+		System.out.println("Numarul subcap.: "+numarulsubcap);
+		
+	}
 	
 }

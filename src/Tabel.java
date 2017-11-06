@@ -1,5 +1,6 @@
+import java.util.*;
 
-public class Tabel {
+ class Tabel extends AbstractElements{
 	String nume;
 	
 	public Tabel() {
@@ -19,5 +20,9 @@ public class Tabel {
 		this.nume = nume;
 	}
 	
-	
+	@Override
+	public void print() {
+		System.out.println("Nume tabelului: " + nume);
+		
+	}
 }

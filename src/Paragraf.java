@@ -1,5 +1,7 @@
+import java.util.*;
 
-public class Paragraf {
+
+ class Paragraf extends AbstractElements {
 	String continut;
 	String titlu;
 	
@@ -27,6 +29,13 @@ public class Paragraf {
 
 	public void setTitlu(String titlu) {
 		this.titlu = titlu;
+	}
+	
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		System.out.println("Titlu: " + titlu);
+		System.out.println("Continut: " + continut);
 	}
 	
 	
