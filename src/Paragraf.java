@@ -32,6 +32,11 @@ import java.util.*;
 	}
 	
 	@Override
+	public void accept(VisitarePartiCarte visitors) {
+		visitors.visit(this);
+	}
+	
+	@Override
 	public void print() {
 		// TODO Auto-generated method stub
 		System.out.println("Titlu: " + titlu);

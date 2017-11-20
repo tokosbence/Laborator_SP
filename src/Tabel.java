@@ -21,6 +21,11 @@ import java.util.*;
 	}
 	
 	@Override
+	public void accept(VisitarePartiCarte visitors) {
+		visitors.visit(this);
+	}
+	
+	@Override
 	public void print() {
 		System.out.println("Nume tabelului: " + nume);
 		

@@ -2,71 +2,34 @@ import java.util.ArrayList;
 import java.util.*;
 
  class Subcapitol extends AbstractElements {
-	Integer numarulsubcap;
-	String titlu;
-	ArrayList<Imagine> imagini = new ArrayList<Imagine>();
-	ArrayList<Tabel> tabele = new ArrayList<Tabel>();
-	ArrayList<Paragraf> paragrafe = new ArrayList<Paragraf>();
-	
-	public Subcapitol() {
+	 public String titlu;
+	 ArrayList<Element> element = new ArrayList<Element>();
 		
-	}
+	 public Subcapitol(String t)
+		{
+			this.titlu = t;
+		}
 
-	public Subcapitol(Integer numarulsubcap, String titlu, ArrayList<Imagine> imagini, ArrayList<Tabel> tabele,
-			ArrayList<Paragraf> paragrafe) {
-		super();
-		this.numarulsubcap = numarulsubcap;
-		this.titlu = titlu;
-		this.imagini = imagini;
-		this.tabele = tabele;
-		this.paragrafe = paragrafe;
-	}
+		public void addElement(Element e){
+			element.add(e);		
+		}
+		public void removeElement(Element e) {		
+			element.remove(e);
+		}
+		public int getElemente() {
+			return element.size();
+		}
 
-	public Integer getNumarulsubcap() {
-		return numarulsubcap;
-	}
-
-	public void setNumarulsubcap(Integer numarulsubcap) {
-		this.numarulsubcap = numarulsubcap;
-	}
-
-	public String getTitlu() {
-		return titlu;
-	}
-
-	public void setTitlu(String titlu) {
-		this.titlu = titlu;
-	}
-
-	public ArrayList<Imagine> getImagini() {
-		return imagini;
-	}
-
-	public void setImagini(ArrayList<Imagine> imagini) {
-		this.imagini = imagini;
-	}
-
-	public ArrayList<Tabel> getTabele() {
-		return tabele;
-	}
-
-	public void setTabele(ArrayList<Tabel> tabele) {
-		this.tabele = tabele;
-	}
-
-	public ArrayList<Paragraf> getParagrafe() {
-		return paragrafe;
-	}
-
-	public void setParagrafe(ArrayList<Paragraf> paragrafe) {
-		this.paragrafe = paragrafe;
-	}
-	
-	@Override
-	public void print() {
-		System.out.println("Titlul subcapitolului: " + titlu);
-		System.out.println("Numarul subcap.: "+numarulsubcap);
+		public void accept(VisitarePartiCarte visitors) {
+			visitors.visit(this);
+		}
 		
-	}
+		public void print() {
+			System.out.println(this.titlu);
+			for(Element e : element)
+			{
+				e.print();
+			}
+		}
 	
 }

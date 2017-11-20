@@ -4,7 +4,7 @@ import java.util.*;
 
  class Imagine extends AbstractElements {
 	private String fileName;
-	private Image data; ///imagedata
+	
 	
 	public Imagine() {
 		
@@ -24,10 +24,13 @@ import java.util.*;
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
+	
+	public void accept(VisitarePartiCarte visitors) {
+		visitors.visit(this);
+	}
 
 	@Override
 	public void print() {
-		// TODO Auto-generated method stub
 		System.out.println("Numele fisierul care contine imagine:" + fileName);
 	}
 	

@@ -14,14 +14,19 @@ public class AbstractElements implements Element {
 	}
 
 	@Override
-	public Element get(int index) {
+	public int getElement() {
 		// TODO Auto-generated method stub
-		return null;
+		return (Integer) null;
 	}
 
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void accept(VisitarePartiCarte visitors) {
 		
 	}
 
