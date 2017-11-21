@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.Collection;
+
+
 
 public class Sectiuni implements Element {
 
 	public String titlu;
-	ArrayList<Element> elem = new ArrayList<Element>();
+	private Collection<Element> elemente = new ArrayList<Element>();
 	
 	public Sectiuni(String titlu) {
 		this.titlu = titlu;
@@ -16,13 +19,9 @@ public class Sectiuni implements Element {
 
 	@Override
 	public void remove(Element elem) {
-		elem.remove(elem);
+		elemente.remove(elem);
 	}
 
-	@Override
-	public int getElement() {
-		return elem.size();
-	}
 
 	@Override
 	public void accept(VisitarePartiCarte visitors) {
@@ -32,10 +31,13 @@ public class Sectiuni implements Element {
 	@Override
 	public void print() {
 		System.out.println(this.titlu);
-		for(Element e : elem)
-		{
-			e.print();
-		}
+		System.out.println("Sectiune " + titlu);
+	}
+
+	@Override
+	public Element getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

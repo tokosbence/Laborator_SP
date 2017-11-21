@@ -2,7 +2,7 @@ import java.awt.Image;
 import java.util.*;
 
 
- class Imagine extends AbstractElements {
+ public class Imagine implements Element {
 	private String fileName;
 	
 	
@@ -25,6 +25,7 @@ import java.util.*;
 		this.fileName = fileName;
 	}
 	
+	@Override
 	public void accept(VisitarePartiCarte visitors) {
 		visitors.visit(this);
 	}
@@ -32,6 +33,24 @@ import java.util.*;
 	@Override
 	public void print() {
 		System.out.println("Numele fisierul care contine imagine:" + fileName);
+	}
+
+	@Override
+	public void add(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Element getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

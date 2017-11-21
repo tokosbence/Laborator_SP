@@ -1,7 +1,7 @@
 import java.util.*;
 
- class Tabel extends AbstractElements{
-	String nume;
+ public class Tabel implements Element{
+	 private String nume;
 	
 	public Tabel() {
 		
@@ -29,5 +29,23 @@ import java.util.*;
 	public void print() {
 		System.out.println("Nume tabelului: " + nume);
 		
+	}
+
+	@Override
+	public void add(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Element getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

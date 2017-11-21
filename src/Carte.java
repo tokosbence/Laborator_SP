@@ -1,47 +1,71 @@
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class Carte {
-	String titlu;
-	ArrayList<String> continut = new ArrayList<String>();
-	ArrayList<Autor> autori = new ArrayList<Autor>();
+
+
+public class Carte implements Element {
 	
-	public Carte() {
+	private String titlu;
+	private final Autor[] autor;
+	private final Collection<Element> elemente = new ArrayList<Element>();
+	 
+	
+
+	Carte(String titlu, Autor[] autor){
+		this.titlu = titlu;
+		this.autor = autor;
+	}
+	
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		System.out.println("Titlu: " + titlu + "\n" + " autor: " + autor);
+	}
+	
+	Autor a1 = new Autor("Ioan Slavici");
+
+	@Override
+	public void add(Element e) {
+		elemente.add(e);
 		
 	}
-
-	public Carte(String titlu, ArrayList<String> continut, ArrayList<Autor> autori) {
-		super();
+	
+	@Override
+	public Element getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public void setTitlu(String titlu){
 		this.titlu = titlu;
-		this.continut = continut;
-		this.autori = autori;
 	}
 
 	public String getTitlu() {
 		return titlu;
 	}
 
-	public void setTitlu(String titlu) {
-		this.titlu = titlu;
+	public Autor[] getAutor() {
+		return autor;
 	}
 
-	public ArrayList<String> getContinut() {
-		return continut;
+	public Collection<Element> getElemente() {
+		return elemente;
 	}
 
-	public void setContinut(ArrayList<String> continut) {
-		this.continut = continut;
-	}
-
-	public ArrayList<Autor> getAutori() {
-		return autori;
-	}
-
-	public void setAutori(ArrayList<Autor> autori) {
-		this.autori = autori;
+	@Override
+	public void remove(Element e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
-	
-	
+	@Override
+	public void accept(VisitarePartiCarte visitors) {
+		// TODO Auto-generated method stub
+		visitors.visit(this);
+	}
+
+
+
 	
 }

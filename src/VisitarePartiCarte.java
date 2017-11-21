@@ -1,6 +1,6 @@
 
 public interface VisitarePartiCarte {
-	public void visit(Capitol capitol);
+	public void visit(Carte carte);
 	public void visit(ImageProxy imgproxy);
 	public void visit(Imagine img);
 	public void visit(Paragraf paragraf);

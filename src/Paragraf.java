@@ -1,25 +1,26 @@
 import java.util.*;
 
 
- class Paragraf extends AbstractElements {
-	String continut;
-	String titlu;
+
+ public class Paragraf implements Element {
+	private String titlu;
+	private Collection <Element> continut = new ArrayList<Element>();
 	
 	public Paragraf() {
 		
 	}
 
-	public Paragraf(String continut, String titlu) {
+	public Paragraf(Collection<Element> continut, String titlu) {
 		super();
 		this.continut = continut;
 		this.titlu = titlu;
 	}
 
-	public String getContinut() {
+	public Collection<Element> getContinut() {
 		return continut;
 	}
 
-	public void setContinut(String continut) {
+	public void setContinut(Collection<Element> continut) {
 		this.continut = continut;
 	}
 
@@ -41,6 +42,24 @@ import java.util.*;
 		// TODO Auto-generated method stub
 		System.out.println("Titlu: " + titlu);
 		System.out.println("Continut: " + continut);
+	}
+
+	@Override
+	public void add(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(Element elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Element getElemente(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
