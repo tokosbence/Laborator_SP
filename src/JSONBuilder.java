@@ -63,7 +63,10 @@ public class JSONBuilder implements Builder {
 		@SuppressWarnings("unchecked")
 		Collection<HashMap<String, Object>> children = (Collection) map.get("children");
 		for (HashMap<String, Object> child : children) {
-			s.add(processMap(child));
+			Element el = processMap(child);
+			if(el != null) {
+				s.add(el);
+			}
 		}
 		return s;
 	}

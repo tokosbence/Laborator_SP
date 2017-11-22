@@ -22,6 +22,6 @@ public class Autor {
 		this.nume = nume;
 	}
 
-	
+
 	
 }

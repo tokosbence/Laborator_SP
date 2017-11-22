@@ -30,8 +30,12 @@ public class Sectiuni implements Element {
 	
 	@Override
 	public void print() {
-		System.out.println(this.titlu);
+		//System.out.println(this.titlu);
 		System.out.println("Sectiune " + titlu);
+		
+		for(Element el: elemente) {
+			el.print();
+		}
 	}
 
 	@Override
