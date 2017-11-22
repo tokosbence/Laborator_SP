@@ -3,7 +3,7 @@ public class PartiDeCarteDisplaying implements VisitarePartiCarte{
 
 	@Override
 	public void visit(Carte carte) {
-		System.out.println("Displaying capitol");
+		System.out.println("Displaying carte");
 		
 	}
 

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Subcapitol implements Element {
 	 public String titlu;
-	 ArrayList<Element> element = new ArrayList<Element>();
+	 public ArrayList<Element> elemente = new ArrayList<Element>();
 		
 	 public Subcapitol(String t)
 		{
@@ -12,7 +12,7 @@ public class Subcapitol implements Element {
 
 		
 		public int getElemente() {
-			return element.size();
+			return elemente.size();
 		}
 
 		public void accept(VisitarePartiCarte visitors) {
@@ -22,13 +22,13 @@ public class Subcapitol implements Element {
 		@Override
 		public void add(Element elem) {
 			// TODO Auto-generated method stub
-			element.add(elem);	
+			elemente.add(elem);	
 		}
 
 		@Override
 		public void remove(Element elem) {
 			// TODO Auto-generated method stub
-			element.remove(elem);
+			elemente.remove(elem);
 		}
 
 		@Override

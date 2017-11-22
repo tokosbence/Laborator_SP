@@ -8,7 +8,8 @@ public class Carte implements Element {
 	private String titlu;
 	private final Autor[] autor;
 	private final Collection<Element> elemente = new ArrayList<Element>();
-	 
+	
+	
 	
 
 	Carte(String titlu, Autor[] autor){
@@ -22,7 +23,7 @@ public class Carte implements Element {
 		System.out.println("Titlu: " + titlu + "\n" + " autor: " + autor);
 	}
 	
-	Autor a1 = new Autor("Ioan Slavici");
+	//Autor a1 = new Autor("Ioan Slavici");
 
 	@Override
 	public void add(Element e) {

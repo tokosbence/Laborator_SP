@@ -9,6 +9,10 @@ import java.util.*;
 	public Paragraf() {
 		
 	}
+	
+	public Paragraf(String titlu) {
+		this.titlu = titlu;
+	}
 
 	public Paragraf(Collection<Element> continut, String titlu) {
 		super();
@@ -47,7 +51,7 @@ import java.util.*;
 	@Override
 	public void add(Element elem) {
 		// TODO Auto-generated method stub
-		
+		continut.add(elem);
 	}
 
 	@Override

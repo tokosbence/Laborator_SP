@@ -2,7 +2,8 @@ import java.util.*;
 
  public class Tabel implements Element{
 	 private String nume;
-	
+	 private Collection<Element> elemente = new ArrayList<Element>();
+	 
 	public Tabel() {
 		
 	}
@@ -34,7 +35,7 @@ import java.util.*;
 	@Override
 	public void add(Element elem) {
 		// TODO Auto-generated method stub
-		
+		elemente.add(elem);
 	}
 
 	@Override

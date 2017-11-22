@@ -14,7 +14,7 @@ public class Sectiuni implements Element {
 	
 	@Override
 	public void add(Element elem) {
-		elem.add(elem);
+		elemente.add(elem);
 	}
 
 	@Override
